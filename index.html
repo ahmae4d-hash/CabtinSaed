@@ -212,9 +212,9 @@ tbody tr.marked{background:var(--mark-bg)!important;}
         <input type="text" id="saveName" placeholder="اسم الملف للحفظ..." style="flex:2;min-width:140px;"/>
         <button class="btn btn-green" onclick="saveToArchive()">💾 <span>حفظ</span></button>
         <input type="text" id="searchBox" placeholder="🔍 بحث في الأرشيف..." oninput="filterArchive()" style="flex:2;min-width:120px;"/>
-        <button class="btn btn-purple" onclick="document.getElementById('importBackup').click()" title="استيراد نسخة احتياطية">📥 <span>نسخة</span></button>
+        <button class="btn btn-purple" onclick="document.getElementById('importBackup').click()" title="استيراد نسخة احتياطية">📥 <span>استيراد</span></button>
         <input type="file" id="importBackup" accept=".json" style="display:none" onchange="importBackup(event)"/>
-        <button class="btn btn-teal" onclick="exportBackup()" title="تصدير نسخة احتياطية">📤 <span>نسخة</span></button>
+        <button class="btn btn-teal" onclick="exportBackup()" title="تصدير نسخة احتياطية">📤 <span>تصدير</span></button>
       </div>
       <div class="archive-list" id="archiveList"></div>
     </section>
@@ -284,7 +284,7 @@ tbody tr.marked{background:var(--mark-bg)!important;}
     <div class="action-bar no-print">
       <button class="btn btn-blue" onclick="exportStyledExcel()">📊 <span>إكسيل منظم</span></button>
       <button class="btn btn-orange" onclick="openPdfModal()">🖨️ <span>طباعة/PDF</span></button>
-      <button class="btn btn-teal" onclick="shareData()">📤 <span>مشاركة</span></button>
+      <button class="btn btn-teal" onclick="shareData()">📤 <span> نسخ الجدول </span></button>
       <button class="btn btn-red" onclick="confirmClear()">🗑️ <span>مسح الجدول</span></button>
     </div>
   </div>
@@ -335,7 +335,7 @@ tbody tr.marked{background:var(--mark-bg)!important;}
     <div class="modal-btns">
       <button class="btn btn-orange" onclick="closeModal('pdfModal');exportPDF()">🖨️ طباعة عادية</button>
       <button class="btn btn-blue" onclick="closeModal('pdfModal');openPdfPasswordModal()">🔐 تصدير PDF بكلمة سر</button>
-      <button class="btn btn-gray" onclick="closeModal('pdfModal');exportPDF()">📄 PDF بدون حماية</button>
+      <button class="btn btn-gray" onclick="closeModal('pdfModal');exportPDF()"> طباعة </button>
       <button class="btn btn-gray" onclick="closeModal('pdfModal')">إلغاء ✕</button>
     </div>
   </div>
